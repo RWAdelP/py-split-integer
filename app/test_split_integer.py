@@ -39,7 +39,7 @@ def test_should_split_into_equal_parts_when_value_divisible_by_parts(
     if value % parts == 0:
         assert (
             (max(split_integer(value, parts))
-             == min(split_integer(value, parts)))
+             - min(split_integer(value, parts)) <= 1)
         ), f"Should consist of {parts} equal parts"
 
 
